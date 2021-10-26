@@ -28,11 +28,11 @@ export const Pokemon = ({ pokemon }: IProps) => (
         <PokemonStats stats={pokemon.stats} />
 
         <div className="d-flex flex-column col-sm-5 col-12">
-          <div className="d-flex justify-content-center align-items-center p-1 m-1 bg-primary text-yellow rounded">
+          <div className="d-flex justify-content-center align-items-center p-1 m-1 bg-info text-yellow rounded">
             Height: {pokemon.height}
           </div>
 
-          <div className="d-flex justify-content-center align-items-center p-1 m-1 bg-primary text-yellow rounded">
+          <div className="d-flex justify-content-center align-items-center p-1 m-1 bg-info text-yellow rounded">
             Weight: {pokemon.weight}
           </div>
 
