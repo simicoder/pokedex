@@ -6,7 +6,7 @@ import { Layout } from '../components/organisms/Layout/Layout';
 export const HomeView = () => {
   const { pokemons, setPokemons } = usePokemonContext();
 
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [numberOfElements, setNumberOfElements] = useState(0);
 
   const observer = useRef<HTMLDivElement | IntersectionObserver>(null!);
@@ -33,7 +33,17 @@ export const HomeView = () => {
     fetch(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`)
       .then((response) => response.json())
       .then((data) => {
-        setPokemons([...pokemons, ...data.results]);
+        const pokeTab = [...pokemons, ...data.results];
+
+        // removing duplicates
+        const result = pokeTab
+          .map((e) => e.name)
+          .map((e, i, final) => final.indexOf(e) === i && i)
+          .filter((e) => pokeTab[e as number])
+          .map((e) => pokeTab[e as number]);
+
+        setPokemons(result);
+
         setLoading(false);
       });
   };
@@ -48,8 +58,8 @@ export const HomeView = () => {
         {pokemons.map((pokemon, index) => {
           if (pokemons.length === index + 1) {
             return (
-              <div ref={lastElementRef}>
-                <PokemonCard key={pokemon.name} pokemon={pokemon} />
+              <div key={pokemon.name} ref={lastElementRef}>
+                <PokemonCard pokemon={pokemon} />
               </div>
             );
           }
