@@ -1,5 +1,5 @@
 import React, { createContext, useState, Dispatch, SetStateAction, useContext } from 'react';
-import { IPokemon } from '../types/IPokemon';
+import { IPokemon } from '../types/types';
 
 const PokemonContext = createContext<ContextType>({
   pokemons: [],

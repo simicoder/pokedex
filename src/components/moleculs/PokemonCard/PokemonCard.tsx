@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { IPokemon } from '../../../types/IPokemon';
+import { IPokemon } from '../../../types/types';
 
 interface IProps {
   pokemon: IPokemon;
@@ -19,7 +19,7 @@ export const PokemonCard = ({ pokemon }: IProps) => (
       />
     </div>
     <div className="d-flex justify-content-center">
-      <p className="d-flex justify-content-center align-items-center p-1 bg-primary text-warning rounded">
+      <p className="d-flex justify-content-center align-items-center p-1 bg-primary text-yellow rounded">
         {pokemon.name}
       </p>
     </div>
