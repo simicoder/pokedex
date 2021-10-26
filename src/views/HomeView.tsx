@@ -39,10 +39,6 @@ export const HomeView = () => {
   };
 
   useEffect(() => {
-    fetchPokemons();
-  }, []);
-
-  useEffect(() => {
     fetchPokemons(numberOfElements + 50, numberOfElements);
   }, [numberOfElements]);
 
