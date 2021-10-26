@@ -11,13 +11,13 @@ export const Pokemon = ({ pokemon }: IProps) => (
   <div className="d-flex flex-row flex-wrap">
     <div className="d-flex col-12 col-md-5">
       <img
-        className="img-fluid"
+        className="img-fluid my-auto"
         alt="pokemon"
         src={`https://img.pokemondb.net/artwork/large/${pokemon.name}.jpg`}
       />
     </div>
 
-    <div className="d-flex mx-auto col-12 col-md-6 h-50 fw-bold flex-wrap">
+    <div className="d-flex mx-auto col-12 col-md-6 fw-bold flex-wrap">
       <div className="d-flex col-12 justify-content-center mb-3">
         <p className="d-flex fw-bold h3 justify-content-center align-items-center p-2 m-1 bg-primary text-yellow rounded">
           {pokemon.name}
