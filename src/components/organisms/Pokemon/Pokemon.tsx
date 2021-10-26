@@ -19,7 +19,7 @@ export const Pokemon = ({ pokemon }: IProps) => (
 
     <div className="d-flex mx-auto col-12 col-md-6 h-50 fw-bold flex-wrap">
       <div className="d-flex col-12 justify-content-center mb-3">
-        <p className="d-flex justify-content-center align-items-center p-1 m-1 bg-primary text-yellow rounded">
+        <p className="d-flex fw-bold h3 justify-content-center align-items-center p-2 m-1 bg-primary text-yellow rounded">
           {pokemon.name}
         </p>
       </div>

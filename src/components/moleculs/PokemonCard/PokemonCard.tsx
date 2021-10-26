@@ -19,7 +19,7 @@ export const PokemonCard = ({ pokemon }: IProps) => (
       />
     </div>
     <div className="d-flex justify-content-center">
-      <p className="d-flex justify-content-center align-items-center p-1 bg-primary text-yellow rounded">
+      <p className="d-flex justify-content-center align-items-center w-100 fw-bold h3 p-1 bg-primary text-yellow rounded">
         {pokemon.name}
       </p>
     </div>
