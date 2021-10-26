@@ -1,5 +1,5 @@
 import React from 'react';
-import { IPokemon } from '../../types/IPokemon';
+import { IPokemon } from '../../../types/IPokemon';
 
 interface IProps {
   pokemon: IPokemon;

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { usePokemonContext } from '../context/PokemonContext';
-import { PokemonCard } from '../components/PokemonCard/PokemonCard';
+import { PokemonCard } from '../components/moleculs/PokemonCard/PokemonCard';
+import { Layout } from '../components/organisms/Layout/Layout';
 
 export const HomeView = () => {
   const { pokemons, setPokemons } = usePokemonContext();
@@ -16,10 +17,12 @@ export const HomeView = () => {
   }, []);
 
   return (
-    <div>
-      {pokemons.map((pokemon) => (
-        <PokemonCard pokemon={pokemon} />
-      ))}
-    </div>
+    <Layout>
+      <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 my-auto">
+        {pokemons.map((pokemon) => (
+          <PokemonCard pokemon={pokemon} />
+        ))}
+      </div>
+    </Layout>
   );
 };

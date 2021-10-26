@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { Pokemon } from '../components/Pokemon/Pokemon';
+import { Layout } from '../components/organisms/Layout/Layout';
+import { Pokemon } from '../components/organisms/Pokemon/Pokemon';
 
 interface pokemonParams {
   pokemonName: string;
@@ -21,5 +22,5 @@ export const PokemonView = () => {
     fetchPokemon();
   }, []);
 
-  return <>{pokemon && <Pokemon pokemon={pokemon} />}</>;
+  return <Layout>{pokemon && <Pokemon pokemon={pokemon} />}</Layout>;
 };
