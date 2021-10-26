@@ -9,9 +9,11 @@ export const SearchResult = () => {
   return (
     <Layout>
       <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 my-auto">
-        {pokemons.map((pokemon, index) => (
-          <PokemonCard key={pokemon.name} pokemon={pokemon} />
-        ))}
+        {pokemons.length ? (
+          pokemons.map((pokemon, index) => <PokemonCard key={pokemon.name} pokemon={pokemon} />)
+        ) : (
+          <div className="d-flex mx-auto justify-content-center">Not Found</div>
+        )}
       </div>
     </Layout>
   );
