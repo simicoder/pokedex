@@ -49,7 +49,7 @@ export const HomeView = () => {
   };
 
   useEffect(() => {
-    fetchPokemons(numberOfElements + 50, numberOfElements);
+    fetchPokemons(50, numberOfElements);
   }, [numberOfElements]);
 
   return (
